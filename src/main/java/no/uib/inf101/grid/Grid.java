@@ -10,7 +10,7 @@ public class Grid<E> implements IGrid<E>{
 
   private int rows;
   private int cols;
-  private E[][] grid;
+  protected E[][] grid;
 
   public Grid(int rows, int cols, E initialValue){
     this.rows = rows;
