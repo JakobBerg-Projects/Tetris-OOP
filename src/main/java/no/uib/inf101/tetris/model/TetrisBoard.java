@@ -3,6 +3,7 @@ package no.uib.inf101.tetris.model;
 import no.uib.inf101.grid.CellPosition;
 import no.uib.inf101.grid.Grid;
 
+
 public class TetrisBoard extends Grid<Character>{
     int rows;
     int cols;
@@ -14,6 +15,8 @@ public class TetrisBoard extends Grid<Character>{
 
         
     }
+    
+        
     public String prettyString(){
         StringBuilder stringBuilder = new StringBuilder();
         for (int row = 0; row < rows; row++) {

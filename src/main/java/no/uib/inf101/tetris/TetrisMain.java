@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import no.uib.inf101.grid.CellPosition;
 import no.uib.inf101.tetris.model.TetrisBoard;
 import no.uib.inf101.tetris.model.TetrisModel;
+import no.uib.inf101.tetris.model.tetromino.RandomTetrominoFactory;
+import no.uib.inf101.tetris.model.tetromino.TetrominoFactory;
 import no.uib.inf101.tetris.view.TetrisView;
 
 
@@ -14,11 +16,12 @@ public class TetrisMain {
   public static void main(String[] args) {
     
     TetrisBoard tetrisBoard = new TetrisBoard(20, 10);
-    tetrisBoard.set(new CellPosition(0, 0), 'q');
+    tetrisBoard.set(new CellPosition(0, 0), 'b');
     tetrisBoard.set(new CellPosition(0, tetrisBoard.cols()-1), 'y');
     tetrisBoard.set(new CellPosition(tetrisBoard.rows()-1, 0), 'r');
-    tetrisBoard.set(new CellPosition(tetrisBoard.rows()-1, tetrisBoard.cols()-1), 'b');
-    TetrisModel tetrisModel = new TetrisModel(tetrisBoard);
+    tetrisBoard.set(new CellPosition(tetrisBoard.rows()-1, tetrisBoard.cols()-1), 'g');
+    TetrominoFactory tetrominoFactory = new RandomTetrominoFactory();
+    TetrisModel tetrisModel = new TetrisModel(tetrisBoard, tetrominoFactory);
     TetrisView view = new TetrisView(tetrisModel);
     
 

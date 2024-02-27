@@ -7,9 +7,9 @@ public interface ViewableTetrisModel {
     // @return gridDimension
     GridDimension getDimension();
 
-
-    // @returns object that iterates over all tiles
     Iterable<GridCell<Character>> getTilesOnBoard();
+    // @returns object that iterates over all tiles
+    Iterable<GridCell<Character>> getTilesOfFallingTetromino();
 
     
 }
