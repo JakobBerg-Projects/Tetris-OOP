@@ -10,7 +10,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 
 public class SampleView extends JPanel {
-
+  
   // Constructor
   public SampleView() {
     this.setFocusable(true);
@@ -26,13 +26,13 @@ public class SampleView extends JPanel {
     Graphics2D g2 = (Graphics2D) g;
     paintSample(g2);
   }
-
+  
   private void paintSample(Graphics2D g2) {
     // A small rectangle (args: x, y of top-left corner, width, height)
     Rectangle2D rect1 = new Rectangle2D.Double(20, 20, 100, 50);
     g2.setColor(Color.BLACK);
     g2.fill(rect1); 
-
+    
     // A small rectangle further down
     Rectangle2D rect2 = new Rectangle2D.Double(20, 120, 100, 50);
     g2.setColor(Color.RED);
@@ -45,10 +45,10 @@ public class SampleView extends JPanel {
     
     // Draw a chess board that resize together with the window/component size
     Rectangle2D chessBox = new Rectangle2D.Double(
-      20,
-      this.getHeight() / 2,
-      this.getWidth() - 40,
-      this.getHeight() / 2 - 20
+    20,
+    this.getHeight() / 2,
+    this.getWidth() - 40,
+    this.getHeight() / 2 - 20
     );
     this.drawChess(g2, chessBox);
     
@@ -62,7 +62,7 @@ public class SampleView extends JPanel {
   private void drawChess(Graphics2D g, Rectangle2D box) {
     double cellWidth = box.getWidth() / 8;
     double cellHeight = box.getHeight() / 8;
-
+    
     for (int row = 0; row < 8; row++) {
       for (int col = 0; col < 8; col++) {
         // Here we paint the chess tile at position (row, col)
@@ -74,7 +74,7 @@ public class SampleView extends JPanel {
         double cellX = box.getX() + col * cellWidth;
         double cellY = box.getY() + row * cellHeight;
         Rectangle2D cellBox = new Rectangle2D.Double(cellX, cellY,
-                                                     cellWidth, cellHeight);
+        cellWidth, cellHeight);
         g.fill(cellBox);
       }
     }

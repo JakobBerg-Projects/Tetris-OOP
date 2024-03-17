@@ -1,8 +1,10 @@
 package no.uib.inf101.tetris.model.tetromino;
 
 public interface TetrominoFactory {
-    //** */ gets the next tetromino
-    //* @returns tetromino
-    //* 
-    public Tetromino getNext();
+  /**
+  * Creates a new random tetromino
+  *
+  * @return a new {@link tetromino} object
+  */
+  public Tetromino getNext();
 }
