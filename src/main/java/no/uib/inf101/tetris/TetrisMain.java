@@ -4,11 +4,13 @@ import javax.swing.JFrame;
 
 import no.uib.inf101.tetris.controller.TetrisController;
 
+
 import no.uib.inf101.tetris.model.TetrisBoard;
 import no.uib.inf101.tetris.model.TetrisModel;
 import no.uib.inf101.tetris.model.tetromino.RandomTetrominoFactory;
 import no.uib.inf101.tetris.model.tetromino.TetrominoFactory;
 import no.uib.inf101.tetris.view.TetrisView;
+
 
 public class TetrisMain {
   public static final String WINDOW_TITLE = "INF101 Tetris";
